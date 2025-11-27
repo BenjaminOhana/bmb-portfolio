@@ -148,23 +148,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Header Scroll Effect
-  const header = document.getElementById('header');
-  const logoImg = document.querySelector('.logo img');
+  // Preload Images for Performance
+  const preloadImages = () => {
+    const imageUrls = [];
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-      header.style.padding = '0.5rem 0';
-      logoImg.style.height = '80px'; // Shrink logo on scroll
-      logoImg.style.width = '80px'; // Keep it square
-      logoImg.style.top = '5px';
-    } else {
-      header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-      header.style.padding = '1rem 0';
-      logoImg.style.height = '120px'; // Restore large size
-      logoImg.style.width = '120px'; // Keep it square
-      logoImg.style.top = '10px';
-    }
+    // Collect all project images
+    Object.values(projects).forEach(project => {
+      if (project.mainImage) imageUrls.push(project.mainImage);
+      if (project.detailImage) imageUrls.push(project.detailImage);
+    });
+
+    // Collect all service images
+    Object.values(services).forEach(service => {
+      if (service.mainImage) imageUrls.push(service.mainImage);
+      if (service.detailImage) imageUrls.push(service.detailImage);
+    });
+
+    // Preload them
+    imageUrls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+    });
+
+    console.log(`Preloaded ${imageUrls.length} images for instant access.`);
+  };
+
+  // Trigger preload after main content loads
+  window.addEventListener('load', () => {
+    // Small delay to prioritize main thread
+    setTimeout(preloadImages, 1000);
   });
+  if (window.scrollY > 50) {
+    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+    header.style.padding = '0.5rem 0';
+    logoImg.style.height = '80px'; // Shrink logo on scroll
+    logoImg.style.width = '80px'; // Keep it square
+    logoImg.style.top = '5px';
+  } else {
+    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+    header.style.padding = '1rem 0';
+    logoImg.style.height = '120px'; // Restore large size
+    logoImg.style.width = '120px'; // Keep it square
+    logoImg.style.top = '10px';
+  }
+});
 });
