@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
-      
+
       if (targetElement) {
         targetElement.scrollIntoView({
           behavior: 'smooth'
@@ -37,13 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Header Scroll Effect
   const header = document.getElementById('header');
+  const logoImg = document.querySelector('.logo img');
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
       header.style.padding = '0.5rem 0';
+      logoImg.style.height = '80px'; // Shrink logo on scroll
+      logoImg.style.top = '5px';
     } else {
       header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
       header.style.padding = '1rem 0';
+      logoImg.style.height = '120px'; // Restore large size
+      logoImg.style.top = '10px';
     }
   });
 });

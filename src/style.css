@@ -65,18 +65,32 @@ header {
   padding: 1rem 0;
 }
 
+.logo img {
+  height: 120px;
+  /* Doubled the size */
+  width: auto;
+  position: absolute;
+  /* Take it out of flow to overflow */
+  top: 10px;
+  /* Adjust vertical position */
+  left: 0;
+  transition: height 0.3s ease;
+  /* Smooth resize on scroll */
+}
+
+/* Ensure the nav container handles the absolute logo correctly */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  /* Push links to the right since logo is absolute left */
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-.logo img {
+  position: relative;
+  /* Context for absolute logo */
   height: 60px;
-  width: auto;
+  /* Keep header height stable */
 }
 
 .nav-links {
