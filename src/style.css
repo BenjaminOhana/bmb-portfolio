@@ -286,19 +286,18 @@ section {
 
 .portrait-img {
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 2px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 20px 20px 0px var(--color-grey-light);
+  /* Graphic shadow effect */
+  transition: transform 0.4s;
 }
 
-.portrait-caption {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--color-wood);
-  text-align: center;
-  margin-top: 1rem;
-  letter-spacing: 1px;
+.portrait-img:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 25px 25px 0px var(--color-gold);
 }
 
 .portrait-img:hover {
