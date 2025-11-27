@@ -71,29 +71,29 @@
             <h2>Réalisations</h2>
             <div class="separator"></div>
           </div>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img src="/src/assets/portfolio_living_modern_1763925374746.png" alt="Salon Haussmannien Moderne">
-              <div class="overlay">
-                <h3>Salon Rive Gauche</h3>
-                <p>Rénovation complète</p>
-              </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-project="salon">
+                    <img src="/src/assets/portfolio_living_modern_1763925374746.png" alt="Salon Haussmannien">
+                    <div class="overlay">
+                        <h3>Salon Haussmannien</h3>
+                        <p>Rénovation complète</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-project="chambre">
+                    <img src="/src/assets/portfolio_bedroom_1763921716174.png" alt="Suite Parentale">
+                    <div class="overlay">
+                        <h3>Suite Parentale</h3>
+                        <p>Aménagement sur mesure</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-project="cuisine">
+                    <img src="/src/assets/portfolio_kitchen_1763921779490.png" alt="Cuisine Moderne">
+                    <div class="overlay">
+                        <h3>Cuisine Moderne</h3>
+                        <p>Design & Fonctionnalité</p>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-item">
-              <img src="/src/assets/portfolio_bedroom_1763921716174.png" alt="Chambre Suite Parentale">
-              <div class="overlay">
-                <h3>Suite "Cocon"</h3>
-                <p>Aménagement sur mesure</p>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="/src/assets/portfolio_kitchen_1763921779490.png" alt="Cuisine Chic Noir et Or">
-              <div class="overlay">
-                <h3>Cuisine "Élégance"</h3>
-                <p>Design & Ergonomie</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -172,6 +172,26 @@
         </div>
       </div>
     </footer>
+    <!-- Project Detail Modal -->
+    <dialog id="project-modal" class="modal">
+        <div class="modal-wrapper">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Titre du Projet</h2>
+                    <p id="modal-subtitle">Sous-titre</p>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-description">Description détaillée...</p>
+                    <div class="modal-gallery">
+                        <img id="modal-main-image" src="" alt="Vue principale">
+                        <img id="modal-detail-image" src="" alt="Détail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

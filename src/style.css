@@ -67,14 +67,22 @@ header {
 
 .logo img {
   height: 120px;
-  /* Doubled the size */
-  width: auto;
+  width: 120px;
+  /* Force square for perfect circle */
+  object-fit: contain;
+  /* Ensure logo isn't stretched */
+  background-color: var(--color-white);
+  /* Background to make the circle visible */
+  border-radius: 50%;
+  /* Make it round */
+  padding: 15px;
+  /* Breathing room */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
   position: absolute;
-  /* Take it out of flow to overflow */
   top: 10px;
-  /* Adjust vertical position */
   left: 0;
-  transition: height 0.3s ease;
+  transition: all 0.3s ease;
   /* Smooth resize on scroll */
 }
 
@@ -439,6 +447,28 @@ section {
   align-self: flex-start;
   border: none;
   cursor: pointer;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .modal-wrapper {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-gallery img {
+    height: 250px;
+  }
 }
 
 /* Footer */
