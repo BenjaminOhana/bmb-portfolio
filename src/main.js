@@ -60,6 +60,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Services Data
+  const services = {
+    'architecture': {
+      title: "Architecture d'Intérieur",
+      subtitle: "Conception & Maîtrise d'Œuvre",
+      description: "Mon approche de l'architecture d'intérieur est globale. Je ne me contente pas de décorer, je repense la structure même de votre habitat pour qu'il s'adapte à votre vie. \n\nMon processus :\n1. Étude de faisabilité et relevé de l'existant.\n2. Conception des plans 2D et modélisation 3D photoréaliste.\n3. Sélection rigoureuse des artisans et suivi de chantier.\n\nJe sculpte les volumes, joue avec la lumière naturelle et crée des circulations fluides pour un espace qui respire et qui dure.",
+      mainImage: "/src/assets/service_architecture.png",
+      detailImage: "/src/assets/logo_bmb_crown.png" // Using logo as secondary image for branding
+    },
+    'decoration': {
+      title: "Décoration & Styling",
+      subtitle: "Ambiance & Matières",
+      description: "La décoration est l'âme de votre maison. C'est elle qui raconte votre histoire. Je vous accompagne dans la création d'une identité visuelle unique, loin des catalogues standardisés.\n\nMes prestations :\n- Planches d'ambiance (Moodboards) et recherche de style.\n- Sélection de mobilier, luminaires et objets d'art.\n- Choix des textiles (rideaux, tapis, coussins) et des revêtements muraux.\n\nJe privilégie les matières nobles (bois, pierre, lin, velours) et les pièces de créateurs pour un rendu intemporel et sophistiqué.",
+      mainImage: "/src/assets/service_decoration.png",
+      detailImage: "/src/assets/logo_bmb_crown.png"
+    },
+    'geobiologie': {
+      title: "Géobiologie de l'Habitat",
+      subtitle: "Harmonie & Bien-être",
+      description: "Votre lieu de vie a une influence directe sur votre vitalité. La géobiologie est l'étude de l'impact de l'environnement sur le vivant. En tant qu'experte, j'analyse votre habitat pour détecter les perturbations invisibles (réseaux telluriques, failles, ondes électromagnétiques).\n\nPourquoi faire une étude ?\n- Pour retrouver un sommeil réparateur.\n- Pour se sentir apaisé et ressourcé chez soi.\n- Pour harmoniser les énergies d'un lieu avant un emménagement.\n\nJ'intègre ces principes dès la conception pour créer des 'maisons-santé' qui prennent soin de vous.",
+      mainImage: "/src/assets/service_geobiology.png",
+      detailImage: "/src/assets/logo_bmb_crown.png"
+    }
+  };
+
   // Modal Logic
   const modal = document.getElementById('project-modal');
   const closeBtn = document.getElementById('close-modal');
@@ -69,23 +94,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalMainImg = document.getElementById('modal-main-image');
   const modalDetailImg = document.getElementById('modal-detail-image');
 
-  // Add click event to all portfolio items
+  // Function to open modal with data
+  const openModal = (data) => {
+    if (data) {
+      modalTitle.textContent = data.title;
+      modalSubtitle.textContent = data.subtitle;
+      modalDesc.innerHTML = data.description.replace(/\n/g, '<br>'); // Handle line breaks
+      modalMainImg.src = data.mainImage;
+
+      // Handle detail image visibility (hide if same as main or generic)
+      if (data.detailImage) {
+        modalDetailImg.src = data.detailImage;
+        modalDetailImg.style.display = 'block';
+      } else {
+        modalDetailImg.style.display = 'none';
+      }
+
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  // Add click event to Portfolio items
   document.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent default anchor behavior if any
+      e.preventDefault();
       const projectId = item.getAttribute('data-project');
-      const data = projects[projectId];
+      openModal(projects[projectId]);
+    });
+  });
 
-      if (data) {
-        modalTitle.textContent = data.title;
-        modalSubtitle.textContent = data.subtitle;
-        modalDesc.textContent = data.description;
-        modalMainImg.src = data.mainImage;
-        modalDetailImg.src = data.detailImage;
-
-        modal.showModal();
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-      }
+  // Add click event to Service items
+  document.querySelectorAll('.service-card').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const serviceId = item.getAttribute('data-service');
+      openModal(services[serviceId]);
     });
   });
 

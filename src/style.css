@@ -355,6 +355,7 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   position: relative;
+  cursor: pointer;
 }
 
 .service-card:hover {
