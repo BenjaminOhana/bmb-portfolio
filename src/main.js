@@ -178,18 +178,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Small delay to prioritize main thread
     setTimeout(preloadImages, 1000);
   });
-  if (window.scrollY > 50) {
-    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-    header.style.padding = '0.5rem 0';
-    logoImg.style.height = '80px'; // Shrink logo on scroll
-    logoImg.style.width = '80px'; // Keep it square
-    logoImg.style.top = '5px';
-  } else {
-    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-    header.style.padding = '1rem 0';
-    logoImg.style.height = '120px'; // Restore large size
-    logoImg.style.width = '120px'; // Keep it square
-    logoImg.style.top = '10px';
-  }
-});
+  // Header Scroll Effect
+  const header = document.getElementById('header');
+  const logoImg = document.querySelector('.logo img');
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+      header.style.padding = '0.5rem 0';
+      logoImg.style.height = '80px'; // Shrink logo on scroll
+      logoImg.style.width = '80px'; // Keep it square
+      logoImg.style.top = '5px';
+    } else {
+      header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+      header.style.padding = '1rem 0';
+      logoImg.style.height = '120px'; // Restore large size
+      logoImg.style.width = '120px'; // Keep it square
+      logoImg.style.top = '10px';
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
 });
