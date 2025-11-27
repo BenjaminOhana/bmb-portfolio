@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  /* Fix anchor positioning behind fixed header */
 }
 
 body {
@@ -29,28 +31,30 @@ body {
   color: var(--color-black);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  /* Sharper text on Mac/iOS */
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading);
-  font-weight: 700;
+/* Remove blue tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color var(--transition-speed);
+/* Tactile Touch Feedback */
+.btn-primary:active,
+.gallery-item:active,
+.service-card:active,
+.nav-links a:active,
+.mobile-cta-btn:active {
+  transform: scale(0.96);
+  transition: transform 0.1s;
 }
 
-ul {
-  list-style: none;
-}
+/* ... existing styles ... */
 
-img {
-  max-width: 100%;
-  display: block;
+.service-card:hover .service-icon svg {
+  transform: scale(1.1);
 }
 
 /* Header */
