@@ -791,4 +791,16 @@ footer {
   .mobile-cta-btn {
     display: flex;
   }
+
+  /* Force overlay visibility on mobile */
+  .gallery-item .overlay {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 1.5rem;
+  }
+
+  .gallery-item .overlay h3 {
+    font-size: 1.2rem;
+  }
 }
