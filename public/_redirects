@@ -1,0 +1,12 @@
+# 301 Redirects for Old Wix URLs
+/courtierentravauxetamo  /#services  301
+/concept                 /#philosophy 301
+/services                /#services   301
+/blank                   /#portfolio  301
+/copie-de-bmbconcept-d-eco /#philosophy 301
+/contact                 /#contact    301
+/general-5               /            301
+/loyalty                 /#contact    301
+
+# SPA Fallback
+/*  /index.html  200

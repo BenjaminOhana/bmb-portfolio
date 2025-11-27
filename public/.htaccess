@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 301 Redirects for Old Wix URLs
+RewriteRule ^courtierentravauxetamo/?$ /#services [R=301,L,NE]
+RewriteRule ^concept/?$ /#philosophy [R=301,L,NE]
+RewriteRule ^services/?$ /#services [R=301,L,NE]
+RewriteRule ^blank/?$ /#portfolio [R=301,L,NE]
+RewriteRule ^copie-de-bmbconcept-d-eco/?$ /#philosophy [R=301,L,NE]
+RewriteRule ^contact/?$ /#contact [R=301,L,NE]
+RewriteRule ^general-5/?$ / [R=301,L]
+RewriteRule ^loyalty/?$ /#contact [R=301,L,NE]
+
+# Handle Single Page Application (Fallback to index.html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
