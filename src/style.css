@@ -140,6 +140,19 @@ nav {
   overflow: hidden;
 }
 
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/hero_modern_chic_1763921356881.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  padding-top: 60px;
+}
+
 .hero-bg {
   position: absolute;
   top: 0;
@@ -689,8 +702,19 @@ footer {
     /* Mobile menu implementation needed if requested, simple hide for now */
   }
 
+  .hero {
+    align-items: flex-start;
+    /* Align top to allow padding to push content down */
+    padding-top: 180px;
+    /* Push content down below the large logo */
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-content {
+    margin-top: 2rem;
   }
 
   .philosophy-content {
@@ -700,5 +724,35 @@ footer {
   .contact-wrapper {
     flex-direction: column;
     padding: 2rem;
+  }
+}
+
+/* Mobile Floating CTA */
+.mobile-cta-btn {
+  display: none;
+  /* Hidden on desktop */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.mobile-cta-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-btn {
+    display: flex;
   }
 }

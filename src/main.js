@@ -41,22 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Le Salon Haussmannien",
       subtitle: "Rénovation Complète - Paris 7ème",
       description: "Pour ce projet, le défi était de conserver l'âme historique du lieu (moulures, parquet point de Hongrie) tout en y insufflant une modernité radicale. Nous avons travaillé sur une mise en lumière scénographique avec des suspensions en laiton brossé et des corniches LED invisibles. Le mobilier, aux lignes organiques, vient adoucir la rigueur de l'architecture classique. Une attention particulière a été portée aux textures : velours de soie, chêne fumé et touches de marbre noir.",
-      mainImage: "/src/assets/portfolio_living_modern_1763925374746.png",
-      detailImage: "/src/assets/detail_living.png"
+      mainImage: "/assets/portfolio_living_modern_1763925374746.png",
+      detailImage: "/assets/detail_living.png"
     },
     'chambre': {
       title: "Suite Parentale Cocooning",
       subtitle: "Aménagement Sur-Mesure - Neuilly",
       description: "Une véritable bulle de sérénité. L'objectif était de créer un espace hors du temps, propice à la déconnexion totale. La tête de lit, dessinée sur mesure, intègre des chevets suspendus et un éclairage indirect doux. Les teintes sables et terracota créent une atmosphère chaleureuse et enveloppante. Le dressing a été conçu comme une boutique de luxe, avec des façades en verre fumé et un éclairage intérieur soigné.",
-      mainImage: "/src/assets/portfolio_bedroom_1763921716174.png",
-      detailImage: "/src/assets/detail_bedroom.png"
+      mainImage: "/assets/portfolio_bedroom_1763921716174.png",
+      detailImage: "/assets/detail_bedroom.png"
     },
     'cuisine': {
       title: "Cuisine Minimaliste Chic",
       subtitle: "Rénovation & Ouverture - Lyon 6ème",
       description: "Cette cuisine n'est pas seulement fonctionnelle, c'est une pièce de réception à part entière. En ouvrant l'espace sur le séjour, nous avons créé une fluidité nouvelle. L'îlot central, véritable sculpture monolithique en pierre naturelle, devient le cœur de la maison. Les façades noir mat contrastent avec la chaleur du bois noyer. Chaque détail a été pensé : robinetterie encastrée, prises invisibles et électroménager dissimulé pour une pureté visuelle absolue.",
-      mainImage: "/src/assets/portfolio_kitchen_1763921779490.png",
-      detailImage: "/src/assets/detail_kitchen.png"
+      mainImage: "/assets/portfolio_kitchen_1763921779490.png",
+      detailImage: "/assets/detail_kitchen.png"
     }
   };
 
@@ -66,22 +66,22 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Architecture d'Intérieur",
       subtitle: "Conception & Maîtrise d'Œuvre",
       description: "Mon approche de l'architecture d'intérieur est globale. Je ne me contente pas de décorer, je repense la structure même de votre habitat pour qu'il s'adapte à votre vie. \n\nMon processus :\n1. Étude de faisabilité et relevé de l'existant.\n2. Conception des plans 2D et modélisation 3D photoréaliste.\n3. Sélection rigoureuse des artisans et suivi de chantier.\n\nJe sculpte les volumes, joue avec la lumière naturelle et crée des circulations fluides pour un espace qui respire et qui dure.",
-      mainImage: "/src/assets/service_architecture.png",
-      detailImage: "/src/assets/logo_bmb_crown.png" // Using logo as secondary image for branding
+      mainImage: "/assets/service_architecture.png",
+      detailImage: "/assets/logo_bmb_crown.png" // Using logo as secondary image for branding
     },
     'decoration': {
       title: "Décoration & Styling",
       subtitle: "Ambiance & Matières",
       description: "La décoration est l'âme de votre maison. C'est elle qui raconte votre histoire. Je vous accompagne dans la création d'une identité visuelle unique, loin des catalogues standardisés.\n\nMes prestations :\n- Planches d'ambiance (Moodboards) et recherche de style.\n- Sélection de mobilier, luminaires et objets d'art.\n- Choix des textiles (rideaux, tapis, coussins) et des revêtements muraux.\n\nJe privilégie les matières nobles (bois, pierre, lin, velours) et les pièces de créateurs pour un rendu intemporel et sophistiqué.",
-      mainImage: "/src/assets/service_decoration.png",
-      detailImage: "/src/assets/logo_bmb_crown.png"
+      mainImage: "/assets/service_decoration.png",
+      detailImage: "/assets/logo_bmb_crown.png"
     },
     'geobiologie': {
       title: "Géobiologie de l'Habitat",
       subtitle: "Harmonie & Bien-être",
       description: "Votre lieu de vie a une influence directe sur votre vitalité. La géobiologie est l'étude de l'impact de l'environnement sur le vivant. En tant qu'experte, j'analyse votre habitat pour détecter les perturbations invisibles (réseaux telluriques, failles, ondes électromagnétiques).\n\nPourquoi faire une étude ?\n- Pour retrouver un sommeil réparateur.\n- Pour se sentir apaisé et ressourcé chez soi.\n- Pour harmoniser les énergies d'un lieu avant un emménagement.\n\nJ'intègre ces principes dès la conception pour créer des 'maisons-santé' qui prennent soin de vous.",
-      mainImage: "/src/assets/service_geobiology.png",
-      detailImage: "/src/assets/logo_bmb_crown.png"
+      mainImage: "/assets/service_geobiology.png",
+      detailImage: "/assets/logo_bmb_crown.png"
     }
   };
 
