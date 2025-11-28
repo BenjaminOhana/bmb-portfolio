@@ -66,22 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Architecture d'Intérieur",
       subtitle: "Conception & Maîtrise d'Œuvre",
       description: "Mon approche de l'architecture d'intérieur est globale. Je ne me contente pas de décorer, je repense la structure même de votre habitat pour qu'il s'adapte à votre vie. \n\nMon processus :\n1. Étude de faisabilité et relevé de l'existant.\n2. Conception des plans 2D et modélisation 3D photoréaliste.\n3. Sélection rigoureuse des artisans et suivi de chantier.\n\nJe sculpte les volumes, joue avec la lumière naturelle et crée des circulations fluides pour un espace qui respire et qui dure.",
-      mainImage: "/assets/service_architecture.png",
-      detailImage: "/assets/logo_bmb_crown.png" // Using logo as secondary image for branding
+      mainImage: "/assets/service_architecture.png"
     },
     'decoration': {
       title: "Décoration & Styling",
       subtitle: "Ambiance & Matières",
       description: "La décoration est l'âme de votre maison. C'est elle qui raconte votre histoire. Je vous accompagne dans la création d'une identité visuelle unique, loin des catalogues standardisés.\n\nMes prestations :\n- Planches d'ambiance (Moodboards) et recherche de style.\n- Sélection de mobilier, luminaires et objets d'art.\n- Choix des textiles (rideaux, tapis, coussins) et des revêtements muraux.\n\nJe privilégie les matières nobles (bois, pierre, lin, velours) et les pièces de créateurs pour un rendu intemporel et sophistiqué.",
-      mainImage: "/assets/service_decoration.png",
-      detailImage: "/assets/logo_bmb_crown.png"
+      mainImage: "/assets/service_decoration.png"
     },
     'geobiologie': {
       title: "Géobiologie de l'Habitat",
       subtitle: "Harmonie & Bien-être",
       description: "Votre lieu de vie a une influence directe sur votre vitalité. La géobiologie est l'étude de l'impact de l'environnement sur le vivant. En tant qu'experte, j'analyse votre habitat pour détecter les perturbations invisibles (réseaux telluriques, failles, ondes électromagnétiques).\n\nPourquoi faire une étude ?\n- Pour retrouver un sommeil réparateur.\n- Pour se sentir apaisé et ressourcé chez soi.\n- Pour harmoniser les énergies d'un lieu avant un emménagement.\n\nJ'intègre ces principes dès la conception pour créer des 'maisons-santé' qui prennent soin de vous.",
-      mainImage: "/assets/service_geobiology.png",
-      detailImage: "/assets/logo_bmb_crown.png"
+      mainImage: "/assets/service_geobiology.png"
     }
   };
 
